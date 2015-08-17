@@ -1,0 +1,11 @@
+[Unit]
+Description=Mumble Server
+After=network.target
+
+[Service]
+PIDFile=/var/run/umurmur.pid
+ExecStart=/usr/bin/umurmurd -c /etc/umurmur/umurmur.conf -p /var/run/umurmur.pid -r
+
+[Install]
+WantedBy=multi-user.target
+
